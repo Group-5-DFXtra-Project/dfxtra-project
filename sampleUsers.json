@@ -1,0 +1,25 @@
+{
+	"users": [
+		{
+			"userId": "1234dfgh",
+			"role": "Admin",
+			"name": "Ed Wright",
+			"email": "email@email.com",
+			"password": "password1234"
+		},
+		{
+			"userId": "1234poiu",
+			"role": "Graduate",
+			"name": "John Smith",
+			"email": "emailOne@email.com",
+			"password": "password1234"
+		},
+		{
+			"userId": "1234yuhj",
+			"role": "Industry Partner",
+			"name": "Paul Walker",
+			"email": "emailTwo@email.com",
+			"password": "password1234"
+		}
+	]
+}

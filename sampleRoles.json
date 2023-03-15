@@ -1,0 +1,16 @@
+{
+	"roles": [
+		{
+			"roleId": "1234qwer",
+			"roleName": "Admin"
+		},
+		{
+			"roleId": "1234asdf",
+			"roleName": "Graduate"
+		},
+		{
+			"roleId": "1234zxcv",
+			"roleName": "Industry Partner"
+		}
+	]
+}
