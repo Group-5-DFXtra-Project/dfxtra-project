@@ -1,5 +1,8 @@
-import logo from './logo.svg';
+import React from 'react';
+import Header from './components/Header'
+import Navbar from './components/Navbar';
 import './App.css';
+
 import Qualifications from './components/Qualifications/Qualifications.jsx';
 import Experience from './components/Experience/Experience.jsx';
 
