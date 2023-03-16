@@ -1,1 +1,18 @@
-/* test */
+.navbar {
+    flex-direction: column;
+    position: fixed;
+    width: 10%;
+    height: 100%;
+    background-color: blue;
+}
+
+.navbar.expanded {
+    width: 20%;
+}
+
+
+
+.sign-out {
+    margin-top: 850px;
+
+}
