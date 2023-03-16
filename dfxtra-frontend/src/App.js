@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import Qualifications from './components/Qualifications/Qualifications.jsx';
+import Experience from './components/Experience/Experience.jsx';
 
 const data= {
 	profileInfo: {
@@ -16,45 +17,45 @@ const data= {
 		},
 		experience: [
 			{
-				"experienceId": "1234poiu",
-				"employerName": "Digital Futures",
-				"employerImage": "link",
-				"position": "Trainee",
-				"startDate": "2023-01-09T00:00:01Z",
-				"endDate": "2023-03-31T23:59:59Z",
-				"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus consequat egestas nibh, ac efficitur est commodo quis. Morbi orci nunc, iaculis nec est in, pretium blandit lacus. In quis mauris eu lorem efficitur posuere nec id massa. Aliquam erat volutpat. Nullam congue magna et augue pharetra, euismod tempus orci semper.",
-				"skills": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus consequat egestas nibh, ac efficitur est commodo quis. Morbi orci nunc, iaculis nec est in, pretium blandit lacus.",
-				"reference": {
+				experienceId: "1234poiu",
+				employerName: "Digital Futures",
+				employerImage: "link",
+				position: "Trainee",
+				startDate: "2023-01-09T00:00:01Z",
+				endDate: "2023-03-31T23:59:59Z",
+				description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus consequat egestas nibh, ac efficitur est commodo quis. Morbi orci nunc, iaculis nec est in, pretium blandit lacus. In quis mauris eu lorem efficitur posuere nec id massa. Aliquam erat volutpat. Nullam congue magna et augue pharetra, euismod tempus orci semper.",
+				skills: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus consequat egestas nibh, ac efficitur est commodo quis. Morbi orci nunc, iaculis nec est in, pretium blandit lacus.",
+				reference: {
 					"referenceName": "Sarah Smith",
 					"referenceEmail": "email@email.com",
 					"referenceNumber": "07123456789"
 				}
 			},
 			{
-				"experienceId": "1234lkjh",
-				"employerName": "Digital Futures",
-				"employerImage": "link",
-				"position": "Trainee",
-				"startDate": "2023-01-09T00:00:01Z",
-				"endDate": "2023-03-31T23:59:59Z",
-				"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus consequat egestas nibh, ac efficitur est commodo quis. Morbi orci nunc, iaculis nec est in, pretium blandit lacus. In quis mauris eu lorem efficitur posuere nec id massa. Aliquam erat volutpat. Nullam congue magna et augue pharetra, euismod tempus orci semper.",
-				"skills": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus consequat egestas nibh, ac efficitur est commodo quis. Morbi orci nunc, iaculis nec est in, pretium blandit lacus.",
-				"reference": {
+				experienceId: "1234lkjh",
+				employerName: "Digital Futures",
+				employerImage: "link",
+				position: "Trainee",
+				startDate: "2023-01-09T00:00:01Z",
+				endDate: "2023-03-31T23:59:59Z",
+				description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus consequat egestas nibh, ac efficitur est commodo quis. Morbi orci nunc, iaculis nec est in, pretium blandit lacus. In quis mauris eu lorem efficitur posuere nec id massa. Aliquam erat volutpat. Nullam congue magna et augue pharetra, euismod tempus orci semper.",
+				skills: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus consequat egestas nibh, ac efficitur est commodo quis. Morbi orci nunc, iaculis nec est in, pretium blandit lacus.",
+				reference: {
 					"referenceName": "Sarah Smith",
 					"referenceEmail": "email@email.com",
 					"referenceNumber": "07123456789"
 				}
 			},
 			{
-				"experienceId": "1234mnbv",
-				"employerName": "Digital Futures",
-				"employerImage": "link",
-				"position": "Trainee",
-				"startDate": "2023-01-09T00:00:01Z",
-				"endDate": "2023-03-31T23:59:59Z",
-				"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus consequat egestas nibh, ac efficitur est commodo quis. Morbi orci nunc, iaculis nec est in, pretium blandit lacus. In quis mauris eu lorem efficitur posuere nec id massa. Aliquam erat volutpat. Nullam congue magna et augue pharetra, euismod tempus orci semper.",
-				"skills": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus consequat egestas nibh, ac efficitur est commodo quis. Morbi orci nunc, iaculis nec est in, pretium blandit lacus.",
-				"reference": {
+				experienceId: "1234mnbv",
+				employerName: "Digital Futures",
+				employerImage: "link",
+				position: "Trainee",
+				startDate: "2023-01-09T00:00:01Z",
+				endDate: "2023-03-31T23:59:59Z",
+				description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus consequat egestas nibh, ac efficitur est commodo quis. Morbi orci nunc, iaculis nec est in, pretium blandit lacus. In quis mauris eu lorem efficitur posuere nec id massa. Aliquam erat volutpat. Nullam congue magna et augue pharetra, euismod tempus orci semper.",
+				skills: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus consequat egestas nibh, ac efficitur est commodo quis. Morbi orci nunc, iaculis nec est in, pretium blandit lacus.",
+				reference: {
 					"referenceName": "Sarah Smith",
 					"referenceEmail": "email@email.com",
 					"referenceNumber": "07123456789"
@@ -119,6 +120,7 @@ function App() {
 				</a>
 			</header> */}
 			<Qualifications qualificationsData={data.profileInfo.qualifications}/>
+			<Experience experienceData = {data.profileInfo.experience}/>
 		</div>
 	);
 }
