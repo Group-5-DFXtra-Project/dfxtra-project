@@ -1,0 +1,38 @@
+.qual-box {
+    background-color: #fff;
+    border: 2px solid black;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.qual-item {
+    background-color: #f0f3f8;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-radius: 10px;
+    max-height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.qual-item img {
+    max-width: 50px;
+    padding: 5px;
+}
+
+.qual-list {
+    column-count: 2;
+}
+
+.qual-name {
+    max-width: 200px;
+}
+
+.qual-info {
+    max-width: 200px;
+    max-height: 60px;
+}

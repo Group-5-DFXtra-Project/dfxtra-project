@@ -1,11 +1,16 @@
 // Individual Qualification Component
 
-const QualificationItem = ({qualification}) => {
-    const { institutionName, institutionImage, educationLevel, subject, grade, description, startDate, endDate } = qualification;
+const QualificationItem = ({ qualification }) => {
+	const { institutionName, institutionImage, educationLevel, subject, grade, description, startDate, endDate } = qualification;
 	return (
-		<div>
-			<h4>{institutionName}</h4>
+		<div className="qual-item">
 			<img src={institutionImage} alt="logo of the Institution" />
+			<div className="qual-info">
+				<h4 className="qual-subject">
+					{educationLevel} - {subject}
+				</h4>
+				<p className="qual-name">{institutionName}</p>
+			</div>
 		</div>
 	);
 };
