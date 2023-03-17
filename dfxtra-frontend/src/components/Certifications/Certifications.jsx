@@ -2,9 +2,9 @@
 
 import CertificationItem from './CertificationsItem/CertificationItem';
 
-const Certifications = (props) => {
+const Certifications = ({certificationsData}) => {
 	//map each of items in certifications
-	const certificationList = props.map((certification) => <CertificationItem certName={certification.certName} certImage={certification.certImage} />);
+	const certificationList = certificationsData.map((certification) => <CertificationItem key={certification.certId} certification={certification} />);
 
 	return (
 		<>

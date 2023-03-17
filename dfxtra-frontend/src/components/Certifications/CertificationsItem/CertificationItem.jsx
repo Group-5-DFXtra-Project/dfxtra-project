@@ -1,6 +1,7 @@
 // Individual Certification Component
 
-const CertificationItem = ({ certName, certImage }) => {
+const CertificationItem = ({certification}) => {
+	const { certName, certImage } = certification;
 	return (
 		<div>
 			<h4>{certName}</h4>
