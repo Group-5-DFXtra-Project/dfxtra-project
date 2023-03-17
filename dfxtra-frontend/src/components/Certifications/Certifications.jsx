@@ -1,16 +1,18 @@
 // Certifications Component
 
+import '../styles/Certification.css';
+
 import CertificationItem from './CertificationsItem/CertificationItem';
 
-const Certifications = ({certificationsData}) => {
+const Certifications = ({ certificationsData }) => {
 	//map each of items in certifications
 	const certificationList = certificationsData.map((certification) => <CertificationItem key={certification.certId} certification={certification} />);
 
 	return (
-		<>
-			<h2>Certifications</h2>
+		<div className="cert-box">
+			<h2 className="certification">Certifications</h2>
 			{certificationList}
-		</>
+		</div>
 	);
 };
 
