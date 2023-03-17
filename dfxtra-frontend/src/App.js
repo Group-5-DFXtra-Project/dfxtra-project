@@ -1,23 +1,25 @@
 import logo from './logo.svg';
 import './App.css';
+import data from "./sampleProfileInfo.json"
+import Certifications from './components/Certifications/Certifications.jsx'
+import Experience from './components/Experience/Experience.jsx'
+import Qualifications from './components/Qualifications/Qualifications.jsx'
+
+const sampleProfile = JSON.parse(JSON.stringify(data))
+
+const certificationsData = sampleProfile.profileInfo.certifications;
+const qualificationsData = sampleProfile.profileInfo.qualifications;
+const experienceData = sampleProfile.profileInfo.experience;
+
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Certifications certificationsData={certificationsData}/>
+      <Qualifications qualificationsData={qualificationsData}/>
+      <Experience experienceData={experienceData}/>
+
     </div>
   );
 }
