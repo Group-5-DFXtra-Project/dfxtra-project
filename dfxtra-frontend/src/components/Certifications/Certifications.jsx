@@ -11,7 +11,7 @@ const Certifications = ({ certificationsData }) => {
 	return (
 		<div className="cert-box">
 			<h2 className="certification">Certifications</h2>
-			{certificationList}
+			<div className="cert-list">{certificationList}</div>
 		</div>
 	);
 };

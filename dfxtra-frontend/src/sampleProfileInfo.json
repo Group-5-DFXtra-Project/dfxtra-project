@@ -61,24 +61,24 @@
 			{
 				"certId": "1234qwer",
 				"certName": "Agile Explorer",
-				"certImage": "link"
+				"certImage": "https://images.credly.com/size/680x680/images/3b7846e2-bdbd-4ed6-8543-182f47502190/image.png"
 			},
 			{
 				"certId": "1234asdf",
 				"certName": "Java Foundations Associate",
-				"certImage": "link"
+				"certImage": "https://images.credly.com/images/aeada4ab-bd8f-4c3c-bf4a-a9f2f4e04dd2/02a_Java_Foundations_Associate.png"
 			},
 			{
 				"certId": "1234zxcv",
 				"certName": "Java Explorer",
-				"certImage": "link"
+				"certImage": "https://education.oracle.com/file/general/badge-explorer.png"
 			}
 		],
 		"qualifications": [
 			{
 				"qualId": "qwer1234",
 				"institutionName": "University of Oxford",
-				"institutionImage": "link",
+				"institutionImage": "https://seeklogo.com/images/U/University_of_Oxford-logo-2ACBB1AA61-seeklogo.com.png",
 				"educationLevel": "Bachelors Degree",
 				"subject": "History",
 				"grade": "2:1",
@@ -89,7 +89,7 @@
 			{
 				"qualId": "asdf1234",
 				"institutionName": "University of Oxford",
-				"institutionImage": "link",
+				"institutionImage": "https://seeklogo.com/images/U/University_of_Oxford-logo-2ACBB1AA61-seeklogo.com.png",
 				"educationLevel": "Bachelors Degree",
 				"subject": "History",
 				"grade": "2:1",

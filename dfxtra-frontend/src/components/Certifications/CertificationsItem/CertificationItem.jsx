@@ -4,8 +4,8 @@ const CertificationItem = ({ certification }) => {
 	const { certName, certImage } = certification;
 	return (
 		<div className="cert-item">
-			<h4>{certName}</h4>
 			<img src={certImage} alt="logo for company" />
+			<h4 className="cert-name">{certName}</h4>
 		</div>
 	);
 };
