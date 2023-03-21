@@ -14,10 +14,10 @@
 			{
 				"experienceId": "1234poiu",
 				"employerName": "Digital Futures",
-				"employerImage": "link",
+				"employerImage": "https://media.glassdoor.com/sqll/4202510/digital-futures-squareLogo-1617292955646.png",
 				"position": "Trainee",
-				"startDate": "2023-01-09T00:00:01Z",
-				"endDate": "2023-03-31T23:59:59Z",
+				"startDate": "Jan 23",
+				"endDate": "Mar 23",
 				"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus consequat egestas nibh, ac efficitur est commodo quis. Morbi orci nunc, iaculis nec est in, pretium blandit lacus. In quis mauris eu lorem efficitur posuere nec id massa. Aliquam erat volutpat. Nullam congue magna et augue pharetra, euismod tempus orci semper.",
 				"skills": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus consequat egestas nibh, ac efficitur est commodo quis. Morbi orci nunc, iaculis nec est in, pretium blandit lacus.",
 				"reference": {
@@ -29,10 +29,10 @@
 			{
 				"experienceId": "1234lkjh",
 				"employerName": "Digital Futures",
-				"employerImage": "link",
+				"employerImage": "https://media.glassdoor.com/sqll/4202510/digital-futures-squareLogo-1617292955646.png",
 				"position": "Trainee",
-				"startDate": "2023-01-09T00:00:01Z",
-				"endDate": "2023-03-31T23:59:59Z",
+				"startDate": "Jan 23",
+				"endDate": "Mar 23",
 				"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus consequat egestas nibh, ac efficitur est commodo quis. Morbi orci nunc, iaculis nec est in, pretium blandit lacus. In quis mauris eu lorem efficitur posuere nec id massa. Aliquam erat volutpat. Nullam congue magna et augue pharetra, euismod tempus orci semper.",
 				"skills": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus consequat egestas nibh, ac efficitur est commodo quis. Morbi orci nunc, iaculis nec est in, pretium blandit lacus.",
 				"reference": {
@@ -44,10 +44,10 @@
 			{
 				"experienceId": "1234mnbv",
 				"employerName": "Digital Futures",
-				"employerImage": "link",
+				"employerImage": "https://media.glassdoor.com/sqll/4202510/digital-futures-squareLogo-1617292955646.png",
 				"position": "Trainee",
-				"startDate": "2023-01-09T00:00:01Z",
-				"endDate": "2023-03-31T23:59:59Z",
+				"startDate": "Jan 23",
+				"endDate": "Mar 23",
 				"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus consequat egestas nibh, ac efficitur est commodo quis. Morbi orci nunc, iaculis nec est in, pretium blandit lacus. In quis mauris eu lorem efficitur posuere nec id massa. Aliquam erat volutpat. Nullam congue magna et augue pharetra, euismod tempus orci semper.",
 				"skills": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus consequat egestas nibh, ac efficitur est commodo quis. Morbi orci nunc, iaculis nec est in, pretium blandit lacus.",
 				"reference": {
