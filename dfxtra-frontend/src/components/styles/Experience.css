@@ -1,0 +1,76 @@
+h2 {
+    display: flex;
+}
+
+.ex-subtext {
+    display:flex;
+}
+
+.ex-box {
+    background-color: #fff;
+    border: 2px solid black;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.ex-item {
+    background-color: #f0f3f8;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    padding-right: 20px;
+    border-radius: 10px;
+    max-height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+}
+
+.ex-item img {
+    max-width: 50px;
+    padding: 5px;
+}
+
+
+.ex-name {
+    max-width: 200px;
+}
+
+.ex-table-headers {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 25px;
+}
+
+.ex-employer {
+    display: flex;
+}
+
+.ex-expand {
+    background-color: #f0f3f8;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    padding-right: 20px;
+    border-radius: 10px;
+    /* display: flex; */
+    /* align-items: center; */
+    max-width: 100%;
+
+
+}
+
+.ex-expand h4 {
+    display: flex;
+    margin: 20px;
+    padding-top: 10px;
+}
+
+.ex-expand p    {
+    display: flex;
+    text-align: left;
+    margin: 20px;
+    padding-bottom: 10px;
+} 

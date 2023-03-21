@@ -22,6 +22,7 @@
 .qual-item img {
     max-width: 50px;
     padding: 5px;
+    margin-right: 2px;
 }
 
 .qual-list {
@@ -33,6 +34,18 @@
 }
 
 .qual-info {
-    max-width: 200px;
+    max-width: 250px;
     max-height: 60px;
+    display: inline;
+    margin: 0;
+}
+
+.qual-name {
+    font-size: small;
+    margin: 0;
+}
+
+.qual-subject {
+    margin: 0;
+    margin-bottom: 3px;
 }
