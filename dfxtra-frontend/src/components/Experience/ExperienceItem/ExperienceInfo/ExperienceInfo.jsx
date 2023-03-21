@@ -1,10 +1,14 @@
+import '../../../styles/Experience.css'
+
 const ExperienceInfo = ({experience})=>{
 
 const {position, description} = experience;
 
     return(
-        <>
-        <p>{description}</p></>
+        <div className='ex-expand'>
+        <h4> {position}</h4>
+        <p>{description}</p>
+        </div>
     )
 }
 
