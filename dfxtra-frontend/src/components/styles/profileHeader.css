@@ -1,4 +1,28 @@
 .profileHeader {
     border: 5px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-top: 40px;
 
+
+}
+
+.h1 {
+    text-align: center;
+}
+
+.h2 {
+    text-align: center;
+}
+
+.profilePicture {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid blue;
+    float: left;
 }

@@ -5,6 +5,7 @@ import '../styles/profileHeader.css';
 const profileHeader = ({ user }) => {
     return (
         <div className="profileHeader">
+
             <img src={user.profilePicture} alt="Profile picture not found" className="profilePicture" />
             <h1>{user.displayName}</h1>
             <h2>{user.tagLine}</h2>
@@ -15,7 +16,8 @@ const profileHeader = ({ user }) => {
             </div>
 
 
-        </div>
+
+        </div >
     )
 }
 
