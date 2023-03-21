@@ -9,7 +9,7 @@ const Qualifications = ({ qualificationsData }) => {
 
 	return (
 		<div className="qual-box">
-			<h2>Qualifications</h2>
+			<h3>Qualifications</h3>
 			<div className="qual-list">{QualificationList}</div>
 		</div>
 	);

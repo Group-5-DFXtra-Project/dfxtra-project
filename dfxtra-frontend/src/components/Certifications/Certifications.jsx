@@ -10,7 +10,7 @@ const Certifications = ({ certificationsData }) => {
 
 	return (
 		<div className="cert-box">
-			<h2>Certifications</h2>
+			<h3>Certifications</h3>
 			<div className="cert-list">{certificationList}</div>
 		</div>
 	);

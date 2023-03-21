@@ -1,4 +1,6 @@
 .header {
-    width: 100%;
-    background-color: aqua;
+    width: 90%;
+    float:right;
+    background-color: #f0f3f8;
+    text-align: left;
 }

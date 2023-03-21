@@ -5,7 +5,7 @@ const CertificationItem = ({ certification }) => {
 	return (
 		<div className="cert-item">
 			<img src={certImage} alt="logo for company" />
-			<h4 className="cert-name">{certName}</h4>
+			<h6 className="cert-name">{certName}</h6>
 		</div>
 	);
 };

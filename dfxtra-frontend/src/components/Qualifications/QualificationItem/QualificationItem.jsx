@@ -3,12 +3,12 @@
 const QualificationItem = ({ qualification }) => {
 	const { institutionName, institutionImage, educationLevel, subject, grade, description, startDate, endDate } = qualification;
 	return (
-		<div className="qual-item">
+		<div className="qual-item text-center">
 			<img src={institutionImage} alt="logo of the Institution" />
 			<div className="qual-info">
-				<h4 className="qual-subject">
+				<h6 className="qual-subject">
 					{educationLevel} - {subject}
-				</h4>
+				</h6>
 				<p className="qual-name">{institutionName}</p>
 			</div>
 		</div>

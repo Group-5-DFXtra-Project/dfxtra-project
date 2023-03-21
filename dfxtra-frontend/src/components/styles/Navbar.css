@@ -3,7 +3,7 @@
     position: fixed;
     width: 10%;
     height: 100%;
-    background-color: blue;
+    background-color: #001450;
 }
 
 .navbar.expanded {
@@ -14,5 +14,4 @@
 
 .sign-out {
     margin-top: 850px;
-
 }

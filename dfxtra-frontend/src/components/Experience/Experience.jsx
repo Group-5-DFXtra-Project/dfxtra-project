@@ -9,13 +9,13 @@ const Experience = ({ experienceData }) => {
 
 	return (
 		<div className="ex-box">
-			<h2>Experience</h2>
+			<h3>Experience</h3>
 			<p className="ex-subtext">View the work experience of the engineer</p>
 			<div className="ex-table-headers">
-				<h6>EMPLOYER</h6>
-				<h6>POSITION</h6>
-				<h6>DATES</h6>
-				<h6> </h6>
+				<p className="fs-6">EMPLOYER</p>
+				<p className="fs-6">POSITION</p>
+				<p className="fs-6">DATES</p>
+				<p className="fs-6"> </p>
 			</div>
 			<hr />
 			<div className="ex-list">{ExperienceList}</div>
