@@ -1,3 +1,17 @@
-.App {
-  text-align: center;
+.container-fluid {
+  padding-top: 25px; 
+}
+
+.Navbar {
+  position: fixed;
+  height: 100%; 
+
+}
+
+.ProfileHeader {
+  padding-left: 15px;
+}
+
+.container-fluid{
+  padding-left: 12%;
 }
