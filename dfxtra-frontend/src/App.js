@@ -16,28 +16,28 @@ const displayName = sampleProfile.profileInfo.profileHeader.displayName;
 const user = sampleProfile.profileInfo.profileHeader;
 
 function App() {
-	return (
-		<div className="App">
-			<Navbar />
-			<Header displayName={displayName} />
-			<div className="container main-content">
-				<div className="row">
-					<div className="col">
-						<ProfileHeader user={user} className="profile-header" />
-					</div>
-				</div>
-				<div className="row">
-					<div className="col-lg-7">
-						<Experience experienceData={experienceData} className="experience" />
-					</div>
-					<div className="col-lg-5">
-						<Certifications certificationsData={certificationsData} className="certifications" />
-						<Qualifications qualificationsData={qualificationsData} className="qualifications" />
-					</div>
-				</div>
-			</div>
-		</div>
-	);
+  return (
+    <div className="App">
+      <Header displayName={displayName} />
+	  <Navbar />
+      <div className="container-fluid">
+        <div className="row">
+          <div className="col">
+            <ProfileHeader user={user} className="profile-header" />
+            <div className="row">
+              <div className="col-lg-7">
+                <Experience experienceData={experienceData} className="experience" />
+              </div>
+              <div className="col-lg-5">
+                <Certifications certificationsData={certificationsData} className="certifications" />
+                <Qualifications qualificationsData={qualificationsData} className="qualifications" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default App;
