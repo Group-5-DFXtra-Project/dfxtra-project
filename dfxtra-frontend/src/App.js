@@ -6,6 +6,7 @@ import Header from './components/Header/Header.jsx';
 import Navbar from './components/Navbar/Navbar.jsx';
 import ProfileHeader from './components/profileHeader/profileHeader.jsx';
 import Qualifications from './components/Qualifications/Qualifications.jsx';
+import Signup from './components/Signup/Signup.jsx';
 
 const sampleProfile = JSON.parse(JSON.stringify(data));
 
@@ -16,9 +17,9 @@ const displayName = sampleProfile.profileInfo.profileHeader.displayName;
 const user = sampleProfile.profileInfo.profileHeader;
 
 function App() {
-  return (
-    <div className="App">
-      <Header displayName={displayName} />
+	return (
+		<div className="App">
+			{/* <Header displayName={displayName} />
 	  <Navbar />
       <div className="container-fluid">
         <div className="row">
@@ -35,9 +36,10 @@ function App() {
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  );
+      </div> */}
+			<Signup />
+		</div>
+	);
 }
 
 export default App;
