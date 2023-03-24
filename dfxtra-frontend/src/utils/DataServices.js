@@ -1,14 +1,21 @@
-import axios from "axios"
-const URL = "skfkds"
+import axios from "axios";
 
+const URL = "http://localhost:8000/api/";
 
-export const submitCert = async (certName)=>{
+export const getToken = () => {
+	return localStorage.getItem("token");
+};
 
-    try{
-        const response = await axios.post(URL, certName)
-        return response.data}
-    catch(e){
-        return {error: e.code, errorMessage: e.message}
-    }
-
-}
+export const submitCert = async (certName) => {
+	const token = getToken();
+	try {
+		const response = await axios.post(
+			URL+"certificate",
+			{ content: certName },
+			{ headers: { Authorization: token } }
+		);
+		return response.data;
+	} catch (e) {
+		return { error: e.code, errorMessage: e.message };
+	}
+};
