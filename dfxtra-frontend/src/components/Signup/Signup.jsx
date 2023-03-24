@@ -3,8 +3,7 @@ import { signUp } from '../../utils/authServices';
 
 const Signup = () => {
 	const [signUpFormData, setSignUpFormData] = useState({
-		firstName: '',
-		lastName: '',
+		username: '',
 		email: '',
 		password: '',
 	});
@@ -28,15 +27,9 @@ const Signup = () => {
 				<h3>Sign Up</h3>
 				<form onSubmit={signupSubmitHandler}>
 					<div className="form-group">
-						<label>First Name: </label>
+						<label>Username: </label>
 						<br />
-						<input type="text" name="firstName" id="firstName" placeholder="Enter your First Name" onChange={signupChangeHandler} />
-					</div>
-
-					<div className="form-group">
-						<label>Last Name: </label>
-						<br />
-						<input type="text" name="lastName" id="lastName" placeholder="Enter your Last Name" onChange={signupChangeHandler} />
+						<input type="text" name="username" id="username" placeholder="Enter your Username" onChange={signupChangeHandler} />
 					</div>
 
 					<div className="form-group">
@@ -48,7 +41,7 @@ const Signup = () => {
 					<div className="form-group">
 						<label>Password: </label>
 						<br />
-						<input type="password" name="userPassword" id="userPassword" placeholder="Enter a password" onChange={signupChangeHandler} />
+						<input type="password" name="password" id="password" placeholder="Enter a password" onChange={signupChangeHandler} />
 					</div>
 
 					<button type="submit" className="btn btn-primary">

@@ -51,7 +51,7 @@ const Login = () => {
 								<div className="form-group">
 									<label>Password: </label>
 									<br />
-									<input type="password" name="userPassword" id="userPassword" placeholder="Enter a password" onChange={logInChangeHandler} />
+									<input type="password" name="password" id="password" placeholder="Enter a password" onChange={logInChangeHandler} />
 								</div>
 
 								<button type="submit" className="btn btn-primary">
