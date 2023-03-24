@@ -6,7 +6,7 @@ import Header from './components/Header/Header.jsx';
 import Navbar from './components/Navbar/Navbar.jsx';
 import ProfileHeader from './components/profileHeader/profileHeader.jsx';
 import Qualifications from './components/Qualifications/Qualifications.jsx';
-import Signup from './components/Signup/Signup.jsx';
+import Login from './components/Login/Login.jsx';
 
 const sampleProfile = JSON.parse(JSON.stringify(data));
 
@@ -37,7 +37,7 @@ function App() {
           </div>
         </div>
       </div> */}
-			<Signup />
+			<Login />
 		</div>
 	);
 }
