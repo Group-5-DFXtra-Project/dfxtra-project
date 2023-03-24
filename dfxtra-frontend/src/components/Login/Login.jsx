@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { logIn } from '../../utils/DataServices.js';
+import { logIn } from '../../utils/authServices';
 import Signup from '../Signup/Signup.jsx';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import loginImage from '../images/dfx-signin-pic.png';

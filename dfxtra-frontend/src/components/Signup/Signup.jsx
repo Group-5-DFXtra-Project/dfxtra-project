@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { signUp } from '../../utils/DataServices.js';
+import { signUp } from '../../utils/authServices';
 
 const Signup = () => {
 	const [signUpFormData, setSignUpFormData] = useState({
