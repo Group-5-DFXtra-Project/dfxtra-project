@@ -16,10 +16,7 @@ function App() {
 			setError({ ...externalDataCallResult.error });
 		}
 
-		const p = externalDataCallResult?.profileInfo ? externalDataCallResult.profileInfo : {};
-		console.log('profile', p);
-		setProfile(p);
-		console.log(profile);
+		setProfile(externalDataCallResult.profileInfo);
 	};
 
 	useEffect(() => {
