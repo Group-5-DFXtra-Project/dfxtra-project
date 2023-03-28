@@ -23,7 +23,7 @@ export const logIn = async (formData) => {
 	}
 };
 
-export const currentUser = async () => {
+export const currentUser = () => {
 	if (localStorage.getItem("token")) {
 		return localStorage.getItem("token");
 	}

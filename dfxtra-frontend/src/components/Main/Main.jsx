@@ -18,9 +18,12 @@ const user = sampleProfile.profileInfo.profileHeader;
 
 const Main = () => {
 	const [User, setUser] = useState(0);
+    console.log("User1",User);
 
 	useEffect(() => {
 		setUser(currentUser());
+        console.log("User2",User);
+
 	},[]);
 
 	return (
