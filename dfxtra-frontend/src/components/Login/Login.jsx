@@ -9,7 +9,7 @@ import { useNavigate } from 'react-router-dom';
 const Login = () => {
 	const [logInFormData, setLogInFormData] = useState({ email: '', password: '' });
 	const [isSignUpForm, setIsSignUpForm] = useState(false);
-	const navigate =useNavigate();
+	const navigate = useNavigate();
 
 	const logInChangeHandler = (e) => {
 		setLogInFormData({ ...logInFormData, [e.target.name]: e.target.value });
@@ -19,8 +19,8 @@ const Login = () => {
 		e.preventDefault();
 		try {
 			await logIn(logInFormData);
-			if (localStorage.getItem('token')){
-				navigate("/profile")
+			if (localStorage.getItem('token')) {
+				navigate('/profile');
 			}
 
 			//redirect to profile page needed here
