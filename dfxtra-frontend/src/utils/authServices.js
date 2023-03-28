@@ -1,11 +1,11 @@
 import axios from "axios";
 
-const URL = 'http://localhost:8000/api/auth/';
+const URL = "http://localhost:8000/api/auth/";
 
 export const signUp = async (formData) => {
 	try {
 		console.log(formData);
-		const response = await axios.post(URL + 'signup', formData);
+		const response = await axios.post(URL + "signup", formData);
 		return response.data;
 	} catch (e) {
 		return { error: e.code, errorMessage: e.message };
@@ -14,10 +14,18 @@ export const signUp = async (formData) => {
 
 export const logIn = async (formData) => {
 	try {
-		const response = await axios.post(URL + 'signin', formData);
-        localStorage.setItem("token", response.data.token)
+		const response = await axios.post(URL + "signin", formData);
+		console.log("response from api", response.data);
+		localStorage.setItem("token", response.data.token);
 		return response.data;
 	} catch (e) {
 		return { error: e.code, errorMessage: e.message };
 	}
+};
+
+export const currentUser = async () => {
+	if (localStorage.getItem("token")) {
+		return localStorage.getItem("token");
+	}
+	return 0;
 };
