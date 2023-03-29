@@ -24,13 +24,13 @@ function CertificationForm({ setIsCertificationForm, getProfileInfo }) {
 	return (
 		<form onSubmit={handleSubmit}>
 			<div className="form-group">
-				<label htmlFor="Certification">Certification:</label>
-				<input type="text" name="CertificationName" value={certificationFormInput} onChange={handleChange} className="form-control" />
+				<label htmlFor="certName">Certification:</label>
+				<input type="text" name="certName" value={certificationFormInput.certName} onChange={handleChange} className="form-control" />
 			</div>
 
 			<div className="form-group">
-				<label htmlFor="certification image">Image:</label>
-				<input type="text" name="certification image" value={certificationFormInput} className="form-control" />
+				<label htmlFor="certImage">Image:</label>
+				<input type="text" name="certImage" value={certificationFormInput.certImage} onChange={handleChange} className="form-control" />
 			</div>
 			<button type="submit" className="btn btn-primary">
 				Submit
