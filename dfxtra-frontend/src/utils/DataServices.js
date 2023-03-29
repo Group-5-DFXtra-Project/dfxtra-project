@@ -16,10 +16,17 @@ export const submitCert = async (formData) => {
 	}
 };
 
+
 export const submitQual = async (formData) => {
 	const token = getToken();
 	try {
 		const response = await axios.put(URL + 'profile/qualifications', formData, { headers: { Authorization: token } });
+		return response.data;
+	} catch (e) {
+		return { error: e.code, errorMessage: e.message };
+	}
+};
+
 export const updateProfileHeader = async (formData) => {
 	const token = getToken();
 	try {
