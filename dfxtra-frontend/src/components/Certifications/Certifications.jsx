@@ -1,5 +1,6 @@
 // Certifications Component
 import { useState } from 'react';
+import Modal from 'react-modal';
 import '../styles/Certification.css';
 import CertificationForm from './CertificationForm';
 
@@ -25,7 +26,9 @@ const Certifications = ({ certificationsData, getProfileInfo }) => {
 			<button className="btn btn-primary edit-button" onClick={handleClick}>
 				{isCertificationForm ? 'x' : 'Add'}
 			</button>
-			{isCertificationForm && <CertificationForm setIsCertificationForm={setIsCertificationForm} getProfileInfo={getProfileInfo} />}
+			<Modal isOpen={isCertificationForm} onRequestClose={() => setIsCertificationForm(false)} ariaHideApp={false}>
+				<CertificationForm setIsCertificationForm={setIsCertificationForm} getProfileInfo={getProfileInfo} />
+			</Modal>
 		</div>
 	);
 };

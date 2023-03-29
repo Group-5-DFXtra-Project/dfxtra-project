@@ -2,10 +2,12 @@ import axios from 'axios';
 
 const URL = 'http://localhost:8000/api/';
 
+// get token from local storage
 export const getToken = () => {
 	return localStorage.getItem('token');
 };
 
+// function to submit a certification
 export const submitCert = async (formData) => {
 	const token = getToken();
 	try {
@@ -16,7 +18,7 @@ export const submitCert = async (formData) => {
 	}
 };
 
-
+// function to submit a qualification
 export const submitQual = async (formData) => {
 	const token = getToken();
 	try {
@@ -27,6 +29,18 @@ export const submitQual = async (formData) => {
 	}
 };
 
+// function to submit an experience
+export const submitExp = async (formData) => {
+	const token = getToken();
+	try {
+		const response = await axios.put(URL + 'profile/experience', formData, { headers: { Authorization: token } });
+		return response.data;
+	} catch (e) {
+		return { error: e.code, errorMessage: e.message };
+	}
+};
+
+// function to update user header
 export const updateProfileHeader = async (formData) => {
 	const token = getToken();
 	try {
@@ -38,6 +52,7 @@ export const updateProfileHeader = async (formData) => {
 	}
 };
 
+// function to get profile info
 export const getProfileInfo = async () => {
 	try {
 		const token = getToken();

@@ -4,15 +4,15 @@ import { useState } from 'react';
 import { updateProfileHeader } from '../../utils/DataServices';
 import '../styles/profileHeader.css';
 
-const ProfileHeader = ({ user , getProfileInfo}) => {
+const ProfileHeader = ({ user, getProfileInfo }) => {
 	const [modalIsOpen, setModalIsOpen] = useState(false);
 	const [formValues, setFormValues] = useState({
-		displayName: '',
-		tagLine: '',
-		overview: '',
-		profilePicture: '',
-		githubLink: '',
-		linkedinLink: ''
+		displayName: user.displayName,
+		tagLine: user.tagLine,
+		overview: user.overview,
+		profilePicture: user.profilePicture,
+		githubLink: user.githubLink,
+		linkedinLink: user.linkedinLink,
 	});
 
 	const handleInputChange = (e) => {
@@ -29,10 +29,8 @@ const ProfileHeader = ({ user , getProfileInfo}) => {
 		} catch (e) {
 			return { error: e.code, errorMessage: e.message };
 		}
-	}
-	
-	
-	
+	};
+
 	return (
 		<div className="profileHeader">
 			<div className="leftColumn">
@@ -52,27 +50,30 @@ const ProfileHeader = ({ user , getProfileInfo}) => {
 			<div className="content">
 				<h1>{user.displayName}</h1>
 				<h5>{user.tagLine}</h5>
-				<div className="Overview"> {user.overview} </div>
+				<div className="Overview">{user.overview}</div>
 			</div>
-		
-			<button onClick={() => setModalIsOpen(true)} className='btn btn-primary'>Edit</button>
+
+			<button onClick={() => setModalIsOpen(true)} className="btn btn-primary">
+				Edit
+			</button>
 			<Modal isOpen={modalIsOpen} onRequestClose={() => setModalIsOpen(false)} ariaHideApp={false}>
 				<h2>Edit Profile Header</h2>
 				<form onSubmit={handleSubmit}>
-					<input type='text' name='displayName' value={formValues.displayName} onChange={handleInputChange} placeholder='display name' className='form-control'/>
-					<input type='text' name='tagLine' value={formValues.tagLine} onChange={handleInputChange} placeholder='tag line' className='form-control'/>
-					<input type='text' name='overview' value={formValues.overview} onChange={handleInputChange} placeholder='overview' className='form-control'/>
-					<input type='text' name='profilePicture' value={formValues.profilePicture} onChange={handleInputChange} placeholder='profile picture' className='form-control' />
-					<input type='text' name='githubLink' value={formValues.githubLink} onChange={handleInputChange} placeholder='github link' className='form-control' />
-					<input type='text' name='linkedinLink' value={formValues.linkedinLink} onChange={handleInputChange} placeholder='linkedin Link' className='form-control'/>
-				
-				<button type='submit' className='btn btn-primary'>Save</button>
-				<button onClick={()=> setModalIsOpen(false)} className='btn btn-primary'>Close</button>
-				</form>	
-			
+					<input type="text" name="displayName" value={formValues.displayName} onChange={handleInputChange} placeholder="display name" className="form-control" />
+					<input type="text" name="tagLine" value={formValues.tagLine} onChange={handleInputChange} placeholder="tag line" className="form-control" />
+					<input type="text" name="overview" value={formValues.overview} onChange={handleInputChange} placeholder="overview" className="form-control" />
+					<input type="text" name="profilePicture" value={formValues.profilePicture} onChange={handleInputChange} placeholder="profile picture" className="form-control" />
+					<input type="text" name="githubLink" value={formValues.githubLink} onChange={handleInputChange} placeholder="github link" className="form-control" />
+					<input type="text" name="linkedinLink" value={formValues.linkedinLink} onChange={handleInputChange} placeholder="linkedin Link" className="form-control" />
+
+					<button type="submit" className="btn btn-primary">
+						Save
+					</button>
+					<button onClick={() => setModalIsOpen(false)} className="btn btn-primary">
+						Close
+					</button>
+				</form>
 			</Modal>
-
-
 		</div>
 	);
 };

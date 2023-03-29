@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { submitQual } from '../../utils/DataServices.js';
 
 function QualificationForm({ setIsQualificationForm, getProfileInfo }) {
-	const [qualificationFormInput, setQualificationFormInput] = useState({ qualName: '', qualImage: '', qualLevel:'', qualSubject:'' });
+	const [qualificationFormInput, setQualificationFormInput] = useState({ qualName: '', qualImage: '', qualLevel: '', qualSubject: '' });
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
@@ -23,6 +23,7 @@ function QualificationForm({ setIsQualificationForm, getProfileInfo }) {
 
 	return (
 		<form onSubmit={handleSubmit}>
+			<h4>Add a Qualification:</h4>
 			<div className="form-group">
 				<label htmlFor="qualName">Institution:</label>
 				<input type="text" name="qualName" value={qualificationFormInput.qualName} onChange={handleChange} className="form-control" />
@@ -42,6 +43,9 @@ function QualificationForm({ setIsQualificationForm, getProfileInfo }) {
 			</div>
 			<button type="submit" className="btn btn-primary">
 				Submit
+			</button>
+			<button className="btn btn-danger" onClick={() => setIsQualificationForm(false)}>
+				Close
 			</button>
 		</form>
 	);

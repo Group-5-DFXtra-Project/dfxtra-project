@@ -10,8 +10,13 @@
     width: 20%;
 }
 
-
-
 .sign-out {
-    margin-top: 850px;
+    margin-top: 80%;
+}
+
+.navbar img {
+    position: absolute;
+    margin-top: 60px;
+    max-width: 100px;
+    margin-left: 10px;
 }

@@ -52,12 +52,12 @@ const Login = () => {
 								<div className="form-group">
 									<label>Email: </label>
 									<br />
-									<input type="email" name="email" id="email" placeholder="Enter your email" onChange={logInChangeHandler} />
+									<input type="email" name="email" id="email" placeholder="Enter your email" onChange={logInChangeHandler} className="form-control" />
 								</div>
 								<div className="form-group">
 									<label>Password: </label>
 									<br />
-									<input type="password" name="password" id="password" placeholder="Enter a password" onChange={logInChangeHandler} />
+									<input type="password" name="password" id="password" placeholder="Enter a password" onChange={logInChangeHandler} className="form-control" />
 								</div>
 
 								<button type="submit" className="btn btn-primary">

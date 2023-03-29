@@ -29,19 +29,19 @@ const Signup = () => {
 					<div className="form-group">
 						<label>Username: </label>
 						<br />
-						<input type="text" name="username" id="username" placeholder="Enter your Username" onChange={signupChangeHandler} />
+						<input type="text" name="username" id="username" placeholder="Enter your Username" onChange={signupChangeHandler} className="form-control" />
 					</div>
 
 					<div className="form-group">
 						<label>Email: </label>
 						<br />
-						<input type="email" name="email" id="email" placeholder="Enter your email" onChange={signupChangeHandler} />
+						<input type="email" name="email" id="email" placeholder="Enter your email" onChange={signupChangeHandler} className="form-control" />
 					</div>
 
 					<div className="form-group">
 						<label>Password: </label>
 						<br />
-						<input type="password" name="password" id="password" placeholder="Enter a password" onChange={signupChangeHandler} />
+						<input type="password" name="password" id="password" placeholder="Enter a password" onChange={signupChangeHandler} className="form-control" />
 					</div>
 
 					<button type="submit" className="btn btn-primary">
