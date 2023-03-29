@@ -21,13 +21,13 @@ function App() {
 
 	useEffect(() => {
 		getProfileInfoHandler();
-	});
+	}, []);
 
 	return (
 		<div className="App">
 			<Router>
 				<Routes>
-					<Route path="/profile" element={<Main profile={profile} />} />
+					<Route path="/profile" element={<Main profile={profile} getProfileInfo={getProfileInfoHandler} />} />
 					<Route path="/" element={<Login />} />
 				</Routes>
 			</Router>

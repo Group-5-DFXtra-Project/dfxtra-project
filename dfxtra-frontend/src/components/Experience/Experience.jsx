@@ -1,9 +1,9 @@
 // Experience Component
 
-import ExperienceItem from './ExperienceItem/ExperienceItems.jsx';
+import ExperienceItem from './ExperienceItem/ExperienceInfo/ExperienceItems.jsx';
 import '../styles/Experience.css';
 
-const Experience = ({ experienceData }) => {
+const Experience = ({ experienceData, getProfileInfo }) => {
 	//map each of items in certifications
 	const ExperienceList = experienceData.map((experience) => <ExperienceItem key={experience.experienceId} experience={experience} />);
 

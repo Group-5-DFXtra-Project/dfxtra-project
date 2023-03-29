@@ -6,10 +6,10 @@ export const getToken = () => {
 	return localStorage.getItem('token');
 };
 
-export const submitCert = async (certName) => {
+export const submitCert = async (formData) => {
 	const token = getToken();
 	try {
-		const response = await axios.put(URL + 'profile/certifications', { content: certName }, { headers: { Authorization: token } });
+		const response = await axios.put(URL + 'profile/certifications', formData, { headers: { Authorization: token } });
 		return response.data;
 	} catch (e) {
 		return { error: e.code, errorMessage: e.message };

@@ -1,6 +1,6 @@
 // Individual Qualification Component
 
-const QualificationItem = ({ qualification }) => {
+const QualificationItem = ({ qualification, getProfileInfo }) => {
 	const { institutionName, institutionImage, educationLevel, subject, grade, description, startDate, endDate } = qualification;
 	return (
 		<div className="qual-item text-center">

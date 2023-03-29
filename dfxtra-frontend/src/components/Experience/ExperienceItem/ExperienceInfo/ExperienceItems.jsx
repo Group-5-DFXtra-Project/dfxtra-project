@@ -1,7 +1,7 @@
 // Individual Experience Component
 import { useState } from 'react';
-import ExperienceInfo from './ExperienceInfo/ExperienceInfo.jsx';
-const ExperienceItem = ({ experience }) => {
+import ExperienceInfo from './ExperienceInfo.jsx';
+const ExperienceItem = ({ experience, getProfileInfo }) => {
 	const { employerName, employerImage, position, description, startDate, endDate, reference } = experience;
 	const [Expand, setExpand] = useState(false);
 
@@ -26,7 +26,7 @@ const ExperienceItem = ({ experience }) => {
 				<button onClick={expandInfo}>Expand</button>
 			</div>
 
-			{Expand && <ExperienceInfo experience={experience} />}
+			{Expand && <ExperienceInfo experience={experience} getProfileInfo={getProfileInfo} />}
 		</>
 	);
 };

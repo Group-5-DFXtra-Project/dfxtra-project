@@ -1,6 +1,6 @@
 import '../../../styles/Experience.css';
 
-const ExperienceInfo = ({ experience }) => {
+const ExperienceInfo = ({ experience, getProfileInfo }) => {
 	const { position, description } = experience;
 
 	return (

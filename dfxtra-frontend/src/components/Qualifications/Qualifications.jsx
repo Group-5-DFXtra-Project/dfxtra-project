@@ -4,8 +4,8 @@ import '../styles/Qualifications.css';
 
 import QualificationItem from './QualificationItem/QualificationItem';
 
-const Qualifications = ({ qualificationsData }) => {
-	const QualificationList = qualificationsData.map((qualification) => <QualificationItem key={qualification.qualId} qualification={qualification} />);
+const Qualifications = ({ qualificationsData, getProfileInfo }) => {
+	const QualificationList = qualificationsData.map((qualification) => <QualificationItem key={qualification.qualId} qualification={qualification} getProfileInfo={getProfileInfo} />);
 
 	return (
 		<div className="qual-box">

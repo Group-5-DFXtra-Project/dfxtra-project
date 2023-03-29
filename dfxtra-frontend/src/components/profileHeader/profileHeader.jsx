@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/profileHeader.css';
 
-const profileHeader = ({ user }) => {
+const profileHeader = ({ user, getProfileInfo }) => {
 	return (
 		<div className="profileHeader">
 			<div className="leftColumn">

@@ -5,10 +5,10 @@ import CertificationForm from './CertificationForm';
 
 import CertificationItem from './CertificationsItem/CertificationItem';
 
-const Certifications = ({ certificationsData }) => {
+const Certifications = ({ certificationsData, getProfileInfo }) => {
 	const [isCertificationForm, setIsCertificationForm] = useState(false);
 	//map each of items in certifications
-	const certificationList = certificationsData.map((certification) => <CertificationItem key={certification.certId} certification={certification} />);
+	const certificationList = certificationsData.map((certification) => <CertificationItem key={certification._id} certification={certification} />);
 	const handleClick = () => {
 		if (isCertificationForm === true) {
 			setIsCertificationForm(false);
@@ -25,7 +25,7 @@ const Certifications = ({ certificationsData }) => {
 			<button className="btn btn-primary edit-button" onClick={handleClick}>
 				{isCertificationForm ? 'x' : 'Add'}
 			</button>
-			{isCertificationForm && <CertificationForm setIsCertificationForm={setIsCertificationForm} />}
+			{isCertificationForm && <CertificationForm setIsCertificationForm={setIsCertificationForm} getProfileInfo={getProfileInfo} />}
 		</div>
 	);
 };
