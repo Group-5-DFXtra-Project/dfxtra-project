@@ -9,6 +9,7 @@ import { currentUser } from '../../utils/authServices.js';
 
 const Main = ({ profile, getProfileInfo }) => {
 	const [User, setUser] = useState(0);
+	const [isExpanded, setIsExpanded] = useState(false);
 
 	useEffect(() => {
 		setUser(currentUser());
@@ -17,7 +18,7 @@ const Main = ({ profile, getProfileInfo }) => {
 	return (
 		<>
 			{User && (
-				<div>
+				<div className="">
 					<Header displayName={profile.profileHeader.displayName} getProfileInfo={getProfileInfo} />
 					<Navbar />
 					<div className="container-fluid">

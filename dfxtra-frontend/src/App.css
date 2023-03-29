@@ -1,18 +1,14 @@
 .container-fluid {
-  padding-top: 25px; 
+  padding-top: 25px;
+  padding-left: 15%;
+  padding-right: 10%;
 }
 
 .Navbar {
   position: fixed;
   height: 100%; 
-
 }
 
 .ProfileHeader {
   padding-left: 15px;
-}
-
-.container-fluid{
-  padding-left: 15%;
-  padding-right: 10%;
 }
