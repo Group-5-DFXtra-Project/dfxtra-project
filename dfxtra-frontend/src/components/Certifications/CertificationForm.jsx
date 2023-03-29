@@ -35,6 +35,9 @@ function CertificationForm({ setIsCertificationForm, getProfileInfo }) {
 			<button type="submit" className="btn btn-primary">
 				Submit
 			</button>
+			<button className="btn btn-danger" onClick={() => setIsCertificationForm(false)}>
+				Close
+			</button>
 		</form>
 	);
 }

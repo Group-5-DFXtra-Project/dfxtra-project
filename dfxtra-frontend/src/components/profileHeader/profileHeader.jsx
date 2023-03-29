@@ -7,12 +7,12 @@ import '../styles/profileHeader.css';
 const ProfileHeader = ({ user, getProfileInfo }) => {
 	const [modalIsOpen, setModalIsOpen] = useState(false);
 	const [formValues, setFormValues] = useState({
-		displayName: '',
-		tagLine: '',
-		overview: '',
-		profilePicture: '',
-		githubLink: '',
-		linkedinLink: '',
+		displayName: user.displayName,
+		tagLine: user.tagLine,
+		overview: user.overview,
+		profilePicture: user.profilePicture,
+		githubLink: user.githubLink,
+		linkedinLink: user.linkedinLink,
 	});
 
 	const handleInputChange = (e) => {
