@@ -9,7 +9,7 @@ import { currentUser } from '../../utils/authServices.js';
 
 const Main = ({ profile, getProfileInfo }) => {
 	const [User, setUser] = useState(0);
-	const [isExpanded, setIsExpanded] = useState(false);
+	// const [isExpanded, setIsExpanded] = useState(false);
 
 	useEffect(() => {
 		setUser(currentUser());

@@ -1,9 +1,9 @@
-import "./App.css";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Login from "./components/Login/Login.jsx";
-import Main from "./components/Main/Main.jsx";
-import { useState, useEffect } from "react";
-import { getProfileInfo } from "./utils/DataServices.js";
+import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Login from './components/Login/Login.jsx';
+import Main from './components/Main/Main.jsx';
+import { useState, useEffect } from 'react';
+import { getProfileInfo } from './utils/DataServices.js';
 
 function App() {
 	const [profile, setProfile] = useState({});
@@ -19,7 +19,6 @@ function App() {
 
 		setProfile(externalDataCallResult.profileInfo);
 		setLoading(false);
-		
 	};
 
 	useEffect(() => {
@@ -30,18 +29,10 @@ function App() {
 		<div className="App">
 			<Router>
 				{loading ? (
-					<div>Loading...</div> 
+					<div>Loading...</div>
 				) : (
 					<Routes>
-						<Route
-							path="/profile"
-							element={
-								<Main
-									profile={profile}
-									getProfileInfo={getProfileInfoHandler}
-								/>
-							}
-						/>
+						<Route path="/profile" element={<Main profile={profile} getProfileInfo={getProfileInfoHandler} />} />
 						<Route path="/" element={<Login />} />
 					</Routes>
 				)}

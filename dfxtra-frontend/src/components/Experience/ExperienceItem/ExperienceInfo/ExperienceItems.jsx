@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import ExperienceInfo from './ExperienceInfo.jsx';
 const ExperienceItem = ({ experience, getProfileInfo }) => {
-	const { employerName, employerImage, position, description, startDate, endDate, reference } = experience;
+	const { employerName, employerImage, position, startDate, endDate } = experience;
 	const [Expand, setExpand] = useState(false);
 
 	const expandInfo = () => {
@@ -23,7 +23,9 @@ const ExperienceItem = ({ experience, getProfileInfo }) => {
 				<p className="ex-dates">
 					{startDate} - {endDate}
 				</p>
-				<button onClick={expandInfo}>Expand</button>
+				<button className="btn btn-primary" onClick={expandInfo}>
+					{Expand ? '-' : '+'}
+				</button>
 			</div>
 
 			{Expand && <ExperienceInfo experience={experience} getProfileInfo={getProfileInfo} />}

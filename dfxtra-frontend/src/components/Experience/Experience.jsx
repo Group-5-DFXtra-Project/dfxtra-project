@@ -1,11 +1,25 @@
 // Experience Component
 
 import ExperienceItem from './ExperienceItem/ExperienceInfo/ExperienceItems.jsx';
+import ExperienceForm from './ExperienceForm.jsx';
 import '../styles/Experience.css';
+import { useState } from 'react';
+import Modal from 'react-modal';
 
 const Experience = ({ experienceData, getProfileInfo }) => {
 	//map each of items in certifications
-	const ExperienceList = experienceData.map((experience) => <ExperienceItem key={experience.experienceId} experience={experience} />);
+	const ExperienceList = experienceData.map((experience) => <ExperienceItem key={experience._id} experience={experience} />);
+
+	const [isExperienceForm, setIsExperienceForm] = useState(false);
+
+	const handleClick = () => {
+		if (isExperienceForm === true) {
+			setIsExperienceForm(false);
+		}
+		if (isExperienceForm === false) {
+			setIsExperienceForm(true);
+		}
+	};
 
 	return (
 		<div className="ex-box">
@@ -19,6 +33,13 @@ const Experience = ({ experienceData, getProfileInfo }) => {
 			</div>
 			<hr />
 			<div className="ex-list">{ExperienceList}</div>
+			<button className="btn btn-primary" onClick={handleClick}>
+				{isExperienceForm ? `x` : `Add`}
+			</button>
+
+			<Modal isOpen={isExperienceForm} onRequestClose={() => setIsExperienceForm(false)} ariaHideApp={false}>
+				<ExperienceForm setIsExperienceForm={setIsExperienceForm} getProfileInfo={getProfileInfo} />
+			</Modal>
 		</div>
 	);
 };

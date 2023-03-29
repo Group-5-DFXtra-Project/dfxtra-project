@@ -23,6 +23,7 @@ function QualificationForm({ setIsQualificationForm, getProfileInfo }) {
 
 	return (
 		<form onSubmit={handleSubmit}>
+			<h4>Add a Qualification:</h4>
 			<div className="form-group">
 				<label htmlFor="qualName">Institution:</label>
 				<input type="text" name="qualName" value={qualificationFormInput.qualName} onChange={handleChange} className="form-control" />

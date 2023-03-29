@@ -23,6 +23,7 @@ function CertificationForm({ setIsCertificationForm, getProfileInfo }) {
 
 	return (
 		<form onSubmit={handleSubmit}>
+			<h4>Add a Certification:</h4>
 			<div className="form-group">
 				<label htmlFor="certName">Certification:</label>
 				<input type="text" name="certName" value={certificationFormInput.certName} onChange={handleChange} className="form-control" />

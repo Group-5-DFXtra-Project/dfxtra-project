@@ -8,7 +8,9 @@ import QualificationItem from './QualificationItem/QualificationItem';
 
 const Qualifications = ({ qualificationsData, getProfileInfo }) => {
 	const QualificationList = qualificationsData.map((qualification) => <QualificationItem key={qualification._id} qualification={qualification} />);
+
 	const [isQualificationForm, setIsQualificationForm] = useState(false);
+
 	const handleClick = () => {
 		if (isQualificationForm === true) {
 			setIsQualificationForm(false);
@@ -17,6 +19,7 @@ const Qualifications = ({ qualificationsData, getProfileInfo }) => {
 			setIsQualificationForm(true);
 		}
 	};
+
 	return (
 		<div className="qual-box">
 			<h3>Qualifications</h3>
