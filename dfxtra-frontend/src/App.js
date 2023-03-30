@@ -8,22 +8,26 @@ import { getProfileInfo } from './utils/DataServices.js';
 function App() {
 	const [profile, setProfile] = useState({});
 	const [error, setError] = useState({ type: ``, message: `` });
+	const [loading, setLoading] = useState(true); // Add a loading state
 
 	const getProfileInfoHandler = async () => {
 		const externalDataCallResult = await getProfileInfo();
 
 		if (externalDataCallResult?.error) {
 			setError({ ...externalDataCallResult.error });
+			
 		}
 
 		setProfile(externalDataCallResult.profileInfo);
+		setLoading(false)
+
 	};
 
 	return (
 		<div className="App">
 			<Router>
 				<Routes>
-					<Route path="/profile" element={<Main profile={profile} getProfileInfo={getProfileInfoHandler} />} />
+					<Route path="/profile" element={<Main profile={profile} loading={loading}  getProfileInfo={getProfileInfoHandler} />} />
 					<Route path="/" element={<Login getProfileInfo={getProfileInfoHandler} />} />
 				</Routes>
 			</Router>

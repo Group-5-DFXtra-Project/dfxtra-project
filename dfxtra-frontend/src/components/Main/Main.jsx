@@ -1,42 +1,52 @@
-import Certifications from '../Certifications/Certifications.jsx';
-import Experience from '../Experience/Experience.jsx';
-import Header from '../Header/Header.jsx';
-import Navbar from '../Navbar/Navbar.jsx';
-import ProfileHeader from '../profileHeader/profileHeader.jsx';
-import Qualifications from '../Qualifications/Qualifications.jsx';
-import { useEffect, useState } from 'react';
-import { currentUser } from '../../utils/authServices.js';
+import Certifications from "../Certifications/Certifications.jsx";
+import Experience from "../Experience/Experience.jsx";
+import Header from "../Header/Header.jsx";
+import Navbar from "../Navbar/Navbar.jsx";
+import ProfileHeader from "../profileHeader/profileHeader.jsx";
+import Qualifications from "../Qualifications/Qualifications.jsx";
 
-const Main = ({ profile, getProfileInfo }) => {
-	const [User, setUser] = useState(0);
-	// const [loading, setLoading] = useState(true); // Add a loading state
-
-	useEffect(() => {
-		setUser(currentUser());
-	}, []);
-
+const Main = ({ profile, getProfileInfo, loading }) => {
 	return (
 		<>
-			{!User && (
+			{loading && (
 				<div>
 					<p>Loading...</p>
 				</div>
 			)}
-			{User && (
+			{!loading && (
 				<div className="">
-					<Header displayName={profile.profileHeader.displayName} getProfileInfo={getProfileInfo} />
+					<Header
+						displayName={profile.profileHeader.displayName}
+						getProfileInfo={getProfileInfo}
+					/>
 					<Navbar />
 					<div className="container-fluid">
 						<div className="row">
 							<div className="col">
-								<ProfileHeader user={profile.profileHeader} className="profile-header" getProfileInfo={getProfileInfo} />
+								<ProfileHeader
+									user={profile.profileHeader}
+									className="profile-header"
+									getProfileInfo={getProfileInfo}
+								/>
 								<div className="row">
 									<div className="col-lg-7">
-										<Experience experienceData={profile.experience} className="experience" getProfileInfo={getProfileInfo} />
+										<Experience
+											experienceData={profile.experience}
+											className="experience"
+											getProfileInfo={getProfileInfo}
+										/>
 									</div>
 									<div className="col-lg-5">
-										<Certifications certificationsData={profile.certifications} className="certifications" getProfileInfo={getProfileInfo} />
-										<Qualifications qualificationsData={profile.qualifications} className="qualifications" getProfileInfo={getProfileInfo} />
+										<Certifications
+											certificationsData={profile.certifications}
+											className="certifications"
+											getProfileInfo={getProfileInfo}
+										/>
+										<Qualifications
+											qualificationsData={profile.qualifications}
+											className="qualifications"
+											getProfileInfo={getProfileInfo}
+										/>
 									</div>
 								</div>
 							</div>
