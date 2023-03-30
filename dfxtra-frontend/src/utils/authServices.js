@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const URL = 'http://localhost:8000/api/auth/';
+const URL = `${process.env.REACT_APP_DFXTRA}/api/auth/`;
 
 export const signUp = async (formData) => {
 	try {

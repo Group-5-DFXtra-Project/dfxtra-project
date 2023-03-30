@@ -1,3 +1,4 @@
+/* eslint-disable testing-library/no-unnecessary-act */
 // Testing for Login in Component
 
 // imports

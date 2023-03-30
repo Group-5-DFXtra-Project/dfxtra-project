@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const URL = 'http://localhost:8000/api/';
+const URL = `${process.env.REACT_APP_DFXTRA}/api/`;
 
 // get token from local storage
 export const getToken = () => {
