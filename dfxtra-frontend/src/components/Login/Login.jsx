@@ -6,7 +6,7 @@ import loginImage from '../images/dfx-signin-pic.png';
 import '../styles/Login.css';
 import { useNavigate } from 'react-router-dom';
 
-const Login = () => {
+const Login = ({ getProfileInfo }) => {
 	const [logInFormData, setLogInFormData] = useState({ email: '', password: '' });
 	const [isSignUpForm, setIsSignUpForm] = useState(false);
 	const navigate = useNavigate();
@@ -20,6 +20,7 @@ const Login = () => {
 		try {
 			await logIn(logInFormData);
 			if (localStorage.getItem('token')) {
+				getProfileInfo();
 				navigate('/profile');
 			}
 

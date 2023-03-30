@@ -33,7 +33,7 @@ function App() {
 				) : (
 					<Routes>
 						<Route path="/profile" element={<Main profile={profile} getProfileInfo={getProfileInfoHandler} />} />
-						<Route path="/" element={<Login />} />
+						<Route path="/" element={<Login getProfileInfo={getProfileInfoHandler} />} />
 					</Routes>
 				)}
 			</Router>
