@@ -8,7 +8,6 @@ import { getProfileInfo } from './utils/DataServices.js';
 function App() {
 	const [profile, setProfile] = useState({});
 	const [error, setError] = useState({ type: ``, message: `` });
-	const [loading, setLoading] = useState(true); // Add a loading state
 
 	const getProfileInfoHandler = async () => {
 		const externalDataCallResult = await getProfileInfo();
@@ -18,24 +17,15 @@ function App() {
 		}
 
 		setProfile(externalDataCallResult.profileInfo);
-		setLoading(false);
 	};
-
-	useEffect(() => {
-		getProfileInfoHandler();
-	}, []);
 
 	return (
 		<div className="App">
 			<Router>
-				{loading ? (
-					<div>Loading...</div>
-				) : (
-					<Routes>
-						<Route path="/profile" element={<Main profile={profile} getProfileInfo={getProfileInfoHandler} />} />
-						<Route path="/" element={<Login getProfileInfo={getProfileInfoHandler} />} />
-					</Routes>
-				)}
+				<Routes>
+					<Route path="/profile" element={<Main profile={profile} getProfileInfo={getProfileInfoHandler} />} />
+					<Route path="/" element={<Login getProfileInfo={getProfileInfoHandler} />} />
+				</Routes>
 			</Router>
 		</div>
 	);

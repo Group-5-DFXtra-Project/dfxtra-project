@@ -9,7 +9,7 @@ import { currentUser } from '../../utils/authServices.js';
 
 const Main = ({ profile, getProfileInfo }) => {
 	const [User, setUser] = useState(0);
-	// const [isExpanded, setIsExpanded] = useState(false);
+	// const [loading, setLoading] = useState(true); // Add a loading state
 
 	useEffect(() => {
 		setUser(currentUser());
@@ -17,6 +17,11 @@ const Main = ({ profile, getProfileInfo }) => {
 
 	return (
 		<>
+			{!User && (
+				<div>
+					<p>Loading...</p>
+				</div>
+			)}
 			{User && (
 				<div className="">
 					<Header displayName={profile.profileHeader.displayName} getProfileInfo={getProfileInfo} />
