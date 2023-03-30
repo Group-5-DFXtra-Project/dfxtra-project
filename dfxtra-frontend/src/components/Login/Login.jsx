@@ -61,7 +61,7 @@ const Login = ({ getProfileInfo }) => {
 									<input type="password" name="password" id="password" placeholder="Enter a password" onChange={logInChangeHandler} className="form-control" />
 								</div>
 
-								<button type="submit" className="btn btn-primary">
+								<button type="submit" title="login-button" className="btn btn-primary">
 									Log In
 								</button>
 							</form>
@@ -70,7 +70,7 @@ const Login = ({ getProfileInfo }) => {
 					{isSignUpForm && <Signup />}
 				</div>
 				<div className="signup-btn">
-					<button type="submit" onClick={showSignUpForm} className="btn btn-primary">
+					<button type="submit" title="signup-button" onClick={showSignUpForm} className="btn btn-primary">
 						{isSignUpForm ? 'Back to Log In' : 'Sign Up'}
 					</button>
 				</div>

@@ -15,27 +15,21 @@ function App() {
 
 		if (externalDataCallResult?.error) {
 			setError({ ...externalDataCallResult.error });
+			
 		}
 
 		setProfile(externalDataCallResult.profileInfo);
-		setLoading(false);
-	};
+		setLoading(false)
 
-	useEffect(() => {
-		getProfileInfoHandler();
-	}, []);
+	};
 
 	return (
 		<div className="App">
 			<Router>
-				{loading ? (
-					<div>Loading...</div>
-				) : (
-					<Routes>
-						<Route path="/profile" element={<Main profile={profile} getProfileInfo={getProfileInfoHandler} />} />
-						<Route path="/" element={<Login getProfileInfo={getProfileInfoHandler} />} />
-					</Routes>
-				)}
+				<Routes>
+					<Route path="/profile" element={<Main profile={profile} loading={loading}  getProfileInfo={getProfileInfoHandler} />} />
+					<Route path="/" element={<Login getProfileInfo={getProfileInfoHandler} />} />
+				</Routes>
 			</Router>
 		</div>
 	);
